@@ -14,7 +14,7 @@ const App = () => {
 				<div className="App">
 					<Switch>
 						<Route path='/Meet/SignUp' component={SignUp} />
-						<Route path='/Meet/SignIn' component={SignIn} />
+						<Route path='/Meet' component={SignIn} />
 					</Switch>
 				</div>
 			</ScrollToTop>

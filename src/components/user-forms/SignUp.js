@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const SignUp = () => {
@@ -87,10 +88,13 @@ const SignUp = () => {
                     </button>
                 </form>
 
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, soluta
-                    veritatis molestias consequatur sit molestiae.
-                </p>
+                <Link to='/Meet'>
+                    <button className='goto-button' type='button'>
+                        Already registered?
+                    </button>
+                </Link>
+
+                <p>&copy; David Popescu 2020</p>
             </div>
         </div>
     );

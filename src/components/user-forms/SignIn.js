@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logIn } from '../../redux/actions';
 import axios from 'axios';
 
 const SignIn = () => {
-    const isLogged = useSelector(state => state.isLogged);
+    const isLogged = useSelector((state) => state.isLogged);
     const dispatch = useDispatch();
 
     const [email, setEmail] = useState('');
@@ -36,15 +37,15 @@ const SignIn = () => {
                 console.log(err);
                 alert('ERROR!');
             });
-        };
-        
-        const info = {
-            email: email,
-            password: password,
-            returnSecureToken: true,
-        };
-        
-        console.log(isLogged);
+    };
+
+    const info = {
+        email: email,
+        password: password,
+        returnSecureToken: true,
+    };
+
+    console.log(isLogged);
     return (
         <div className='user-forms sign-in'>
             <div className='background'>
@@ -77,10 +78,13 @@ const SignIn = () => {
                     </button>
                 </form>
 
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, soluta
-                    veritatis molestias consequatur sit molestiae.
-                </p>
+                <Link to='/Meet/SignUp'>
+                    <button className='goto-button' type='button'>
+                        Not registered?
+                    </button>
+                </Link>
+
+                <p>&copy; David Popescu 2020</p>
             </div>
         </div>
     );

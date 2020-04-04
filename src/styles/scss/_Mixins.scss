@@ -1,0 +1,12 @@
+@mixin flexContent($jContent, $fDirection) {
+    display: flex;
+    align-items: center;
+    justify-content: $jContent;
+    flex-direction: $fDirection;
+}
+
+@mixin transformTL($posX, $posY) {
+    position: absolute;
+    left: $posX;
+    top: $posY;
+}

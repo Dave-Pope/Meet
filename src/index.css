@@ -1,6 +1,12 @@
+@font-face {
+    font-family: Nunito;
+    src: url('./styles/fonts/Nunito-Regular.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
+    font-family: Nunito;
     box-sizing: border-box;
 }
 
